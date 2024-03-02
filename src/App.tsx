@@ -1,10 +1,12 @@
 import React from "react";
-import Layout from "./domain/layout";
+import Layout2 from "./domain/lauout-2/index";
 
 const App = () => {
   return (
     <div>
-      <Layout />
+      {/* <Layout /> */}
+
+      <Layout2 />
     </div>
   );
 };

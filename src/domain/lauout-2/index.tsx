@@ -1,13 +1,22 @@
 import React from "react";
-import SidebarLeft from "../../components/organisms/sidebar-left";
-import Navbar from "../../components/organisms/navbar";
 
-const Layout: React.FC = () => {
+const Layout2 = () => {
   return (
     <div>
-      <Navbar />
       <div className="flex h-screen overflow-hidden bg-gray-100">
-        <SidebarLeft />
+        <div className="w-80 bg-gray-50  overflow-y-auto lg:block">
+          <div className=" w-72 p-3 h-full flex flex-col gap-3">
+            {[...Array(10)]?.map(() => {
+              return (
+                <p>
+                  <a href="#" className="block p-4 hover:bg-gray-700">
+                    Settings
+                  </a>
+                </p>
+              );
+            })}
+          </div>
+        </div>
         <div className="flex flex-col flex-1 w-0 overflow-hidden">
           <main className="flex-1 relative z-0 overflow-y-auto focus:outline-none">
             <div className="py-6">
@@ -18,11 +27,11 @@ const Layout: React.FC = () => {
 
                 {[...Array(230)]?.map(() => {
                   return (
-                    <li>
+                    <p>
                       <a href="#" className="block p-4 hover:bg-gray-700">
                         Settings
                       </a>
-                    </li>
+                    </p>
                   );
                 })}
               </div>
@@ -34,4 +43,4 @@ const Layout: React.FC = () => {
   );
 };
 
-export default Layout;
+export default Layout2;
