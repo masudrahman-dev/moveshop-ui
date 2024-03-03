@@ -5,9 +5,9 @@ import Layout from "./domain/layout";
 const App = () => {
   return (
     <div>
-      <Layout />
+      {/* <Layout /> */}
 
-      {/* <Layout2 /> */}
+      <Layout2 />
       {/* <Layout3 /> */}
     </div>
   );
