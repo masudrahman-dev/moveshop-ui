@@ -10,7 +10,7 @@ const Layout4 = () => {
   const onToggle = () => {
     setIsOpen(!isOpen);
   };
-  console.log("isOpen :>> ", isOpen);
+
   return (
     <div>
       <div className="bg-slate-400 fixed w-full top-0 z-50">
@@ -47,16 +47,18 @@ const Layout4 = () => {
               <div className="md:col-span-3 border w-full text-center  ">
                 <h1 className="text-2xl font-semibold">Right Sidebar</h1>
 
-                <div className="relative group/video">
-                  <img
-                    className="rounded-lg "
-                    src="https://picsum.photos/300/300"
-                    alt=""
-                  />
+                <div className="relative flex items-center justify-center group/video">
+                  <div>
+                    <img
+                      className="rounded-lg "
+                      src="https://picsum.photos/300/300"
+                      alt=""
+                    />
 
-                  <button className="outline group-hover/video:text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-6 w-6 rounded-full flex flex-col items-center justify-center ">
-                    <PlayMiniSolid />
-                  </button>
+                    <button className="outline group-hover/video:text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-6 w-6 rounded-full flex flex-col items-center justify-center ">
+                      <PlayMiniSolid />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
