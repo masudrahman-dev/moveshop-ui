@@ -27,7 +27,7 @@ const CollapsibleWrapper: React.FC<CollapsibleWrapperProps> = ({
         transitionCloseTime={150}
         trigger={
           <>
-            <div className="border flex justify-between p-2">
+            <div className="border flex justify-between p-2 ">
               <span> Collapsible {collapsibleKey.split("collapsible")[1]}</span>
               <span>{isOpen ? "open" : "closed"}</span>
             </div>

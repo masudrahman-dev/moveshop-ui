@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../../components/organisms/navbar";
 import SidebarLeft from "../../components/organisms/sidebar-left";
 import { clx } from "../../utils/clx";
+import { PlayMiniSolid } from "@medusajs/icons";
 
 const Layout4 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,85 +18,50 @@ const Layout4 = () => {
       </div>
 
       <div>
-        <aside className="fixed top-0  left-0 z-40 w-64 h-screen overflow-y-auto overflow-hidden pt-14 transition-transform -translate-x-full  border-r md:translate-x-0 ">
+        <aside
+          className={clx(
+            "fixed top-0  left-0 z-40 w-64 h-screen bg-white overflow-y-auto overflow-hidden pt-14 transition-transform -translate-x-full  border-r md:translate-x-0",
+            {
+              "translate-x-0": isOpen,
+            }
+          )}
+        >
           <SidebarLeft />
         </aside>
-        <div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-            <h1 className="text-2xl font-semibold">Right Sidebar</h1>
-            <p>Welcome to the admin dashboard.</p>
 
-            {[...Array(30)]?.map((_, i) => {
-              return (
-                <p key={i}>
-                  <a href="#" className="block p-4 hover:bg-gray-300">
-                    item {i}
-                  </a>
-                </p>
-              );
-            })}
+        <div className={clx("mt-16 md:ml-64 ml-0")}>
+          <div className="grid grid-cols-1 md:grid-cols-12 justify-items-center">
+            <div className="md:col-span-9">
+              <p>Main Content</p>
+
+              {[...Array(30)]?.map((_, i) => {
+                return (
+                  <p key={i}>
+                    <a href="#" className="block p-4 hover:bg-gray-300">
+                      item {i}
+                    </a>
+                  </p>
+                );
+              })}
+            </div>
+            <div className="md:col-span-3 border w-full text-center  ">
+              <h1 className="text-2xl font-semibold">Right Sidebar</h1>
+
+              <div className="relative group/video">
+                <img
+                  className="rounded-lg "
+                  src="https://picsum.photos/300/300"
+                  alt=""
+                />
+
+                <button className="outline group-hover/video:text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-6 w-6 rounded-full flex flex-col items-center justify-center ">
+                  <PlayMiniSolid />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      {/* <div className="flex h-screen overflow-hidden bg-gray-100">
-        <div className="w-80 bg-gray-50 border  overflow-y-auto lg:block">
-          <div className=" w-72 h-full flex flex-col gap-3 ">
-            {[...Array(10)]?.map((_, i) => {
-              return (
-                <p>
-                  <a href="#" className="block p-4 hover:bg-gray-300">
-                    Item {i}
-                  </a>
-                </p>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className=" bg-gray-50 border  overflow-y-auto lg:block">
-          <div>
-            <SidebarLeft
-              className={clx("hidden md:block", { block: isOpen })}
-            />
-          </div>
-        </div>
-
-        <div className="flex flex-col flex-1 w-0 overflow-hidden">
-          <main className="flex-1 relative z-0 overflow-y-auto focus:outline-none">
-            <div className="py-6 flex">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-                <h1 className="text-2xl font-semibold">Dashboard</h1>
-                <p>Welcome to the admin dashboard.</p>
-
-                {[...Array(30)]?.map((_, i) => {
-                  return (
-                    <p>
-                      <a href="#" className="block p-4 hover:bg-gray-300">
-                        item {i}
-                      </a>
-                    </p>
-                  );
-                })}
-              </div>
-
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-                <h1 className="text-2xl font-semibold">Right Sidebar</h1>
-                <p>Welcome to the admin dashboard.</p>
-
-                {[...Array(30)]?.map((_, i) => {
-                  return (
-                    <p>
-                      <a href="#" className="block p-4 hover:bg-gray-300">
-                        item {i}
-                      </a>
-                    </p>
-                  );
-                })}
-              </div>
-            </div>
-          </main>
-        </div>
-      </div> */}
     </div>
   );
 };

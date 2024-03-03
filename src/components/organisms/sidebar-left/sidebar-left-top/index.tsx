@@ -20,14 +20,11 @@ const SidebarLeftTop = () => {
     isOpen: boolean
   ) => {
     setCollapsibleStates((prevState) => {
-      console.log("prevState :>> ", prevState);
-
       const newState = {
         ...prevState,
         [collapsibleKey]: isOpen,
       };
 
-      console.log("newState :>> ", newState);
       return newState;
     });
   };

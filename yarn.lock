@@ -312,6 +312,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@medusajs/icons@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@medusajs/icons@npm:1.2.0"
+  peerDependencies:
+    react: ^16.x || ^17.x || ^18.x
+  checksum: 10c0/b732b8b5401a235483b7095588ee6aa4916a8b60bc2f50c138e741d61b2f456e32c5042af63dc2d45f81433f7452dd16cb38e418a06e0ffb29f7512e89dd5111
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -2231,6 +2240,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "moveshop-ui@workspace:."
   dependencies:
+    "@medusajs/icons": "npm:^1.2.0"
     "@types/react": "npm:^18.2.56"
     "@types/react-dom": "npm:^18.2.19"
     "@typescript-eslint/eslint-plugin": "npm:^7.0.2"
