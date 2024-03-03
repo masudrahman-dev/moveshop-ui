@@ -6,7 +6,7 @@ import SidebarLeftTop from "./sidebar-left-top";
 const SidebarLeft = ({ className }: { className?: string }) => {
   return (
     <div className={clx("", className, {})}>
-      <div className=" w-72 h-full flex flex-col gap-3">
+      <div className=" h-full flex flex-col gap-3">
         <SidebarLeftTop />
         <SidebarLeftMiddle />
         <SidebarLeftBottom />

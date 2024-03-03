@@ -1,13 +1,8 @@
 import React from "react";
 
-
 const Layout3 = () => {
   return (
     <div>
-      {/* <Layout /> */}
-
-      {/* <Layout2 /> */}
-
       <div className="antialiased bg-gray-50 dark:bg-gray-900">
         <nav className=" border-b  px-4 py-2.5  fixed left-0 right-0 top-0 z-50">
           <div className="flex flex-wrap justify-between items-center">

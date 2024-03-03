@@ -5,7 +5,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ onToggle }) => {
   return (
-    <header className="bg-white shadow py-4 px-6 w-full flex justify-between items-center border">
+    <header className=" shadow py-4 px-6 w-full flex justify-between items-center border">
       <button
         onClick={onToggle}
         className="text-gray-600 focus:outline-none lg:hidden"
