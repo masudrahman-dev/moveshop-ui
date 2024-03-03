@@ -1,30 +1,33 @@
 import React, { useState } from "react";
 import CollapsibleWrapper from "../collapsible-wrapper/index";
 
+const initialStates = {
+  collapsible1: true,
+  collapsible2: true,
+  collapsible3: true,
+  collapsible4: true,
+  collapsible5: false,
+  collapsible6: false,
+  collapsible7: false,
+  collapsible8: false,
+};
+
 const SidebarLeftTop = () => {
   const [collapsibleStates, setCollapsibleStates] = useState<{
     [key: string]: boolean;
-  }>({
-    collapsible1: true,
-    collapsible2: true,
-    collapsible3: true,
-    collapsible4: true,
-    collapsible5: false,
-    collapsible6: false,
-    collapsible7: false,
-    collapsible8: false,
-  });
+  }>(initialStates);
 
   const handleCollapsibleStateChange = (
     collapsibleKey: string,
     isOpen: boolean
   ) => {
     setCollapsibleStates((prevState) => {
+      console.log("prevState :>> ", prevState);
       const newState = {
         ...prevState,
         [collapsibleKey]: isOpen,
       };
-
+      console.log("newState :>> ", newState);
       return newState;
     });
   };

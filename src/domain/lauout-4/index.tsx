@@ -47,7 +47,7 @@ const Layout4 = () => {
               <div className="md:col-span-3 border w-full text-center  ">
                 <h1 className="text-2xl font-semibold">Right Sidebar</h1>
 
-                <div className="relative flex items-center justify-center group/video">
+                <div className="relative  p-2 flex items-center justify-center group/video">
                   <div>
                     <img
                       className="rounded-lg "
