@@ -1,9 +1,15 @@
 import React from "react";
+interface NavbarProps {
+  onToggle: () => void;
+}
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC<NavbarProps> = ({ onToggle }) => {
   return (
-    <header className="bg-white shadow py-4 px-6 w-full flex justify-between items-center">
-      <button className="text-gray-600 focus:outline-none lg:hidden">
+    <header className="bg-white shadow py-4 px-6 w-full flex justify-between items-center border">
+      <button
+        onClick={onToggle}
+        className="text-gray-600 focus:outline-none lg:hidden"
+      >
         {/* Hamburger icon for mobile */}
         <svg
           className="w-6 h-6"

@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import SidebarLeft from "../../components/organisms/sidebar-left";
 import Navbar from "../../components/organisms/navbar";
+import { clx } from "../../utils/clx";
 
 const Layout: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const onToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div>
-      <Navbar />
+      <Navbar onToggle={onToggle} />
+
       <div className="flex h-screen overflow-hidden bg-gray-100">
-        <SidebarLeft />
+        <SidebarLeft className={clx("hidden md:block", { block: isOpen })} />
+
         <div className="flex flex-col flex-1 w-0 overflow-hidden">
           <main className="flex-1 relative z-0 overflow-y-auto focus:outline-none">
             <div className="py-6">
