@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import SidebarLeft from "../../components/organisms/sidebar-left";
-import Navbar from "../../components/organisms/navbar";
-import { clx } from "../../utils/clx";
+import Navbar from "../../../components/organisms/navbar";
+import SidebarLeft from "../../../components/organisms/sidebar-left";
+import { clx } from "../../../utils/clx";
+
 
 const Layout: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

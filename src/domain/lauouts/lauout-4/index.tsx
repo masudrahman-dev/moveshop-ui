@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import Navbar from "../../components/organisms/navbar";
-import SidebarLeft from "../../components/organisms/sidebar-left";
-import { clx } from "../../utils/clx";
+
 import { PlayMiniSolid } from "@medusajs/icons";
+import Navbar from "../../../components/organisms/navbar";
+import { clx } from "../../../utils/clx";
+import SidebarLeft from "../../../components/organisms/sidebar-left";
 
 const Layout4 = () => {
   const [isOpen, setIsOpen] = useState(false);

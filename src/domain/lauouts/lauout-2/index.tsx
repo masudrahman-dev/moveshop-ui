@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../../components/organisms/navbar";
-import SidebarLeft from "../../components/organisms/sidebar-left";
-import { clx } from "../../utils/clx";
+import Navbar from "../../../components/organisms/navbar";
 
 const Layout2 = () => {
   const [isOpen, setIsOpen] = useState(false);
